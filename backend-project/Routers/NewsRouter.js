@@ -3,7 +3,7 @@ const router = express.Router();
 const newsController = require("../Controllers/NewsControllers");
 
 // Lấy danh sách bài viết theo danh mục
-router.get("/categogy/:slug", newsController.getNewsByCategorySlug);
+router.get("/category/:slug", newsController.getNewsByCategorySlug);
 
 // Lấy bài viết theo ID
 router.get("/id/:id", newsController.getNewsById);

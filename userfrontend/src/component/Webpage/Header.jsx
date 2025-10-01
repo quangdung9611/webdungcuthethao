@@ -61,7 +61,7 @@ export default function Header() {
             <nav className="nav">
               <div className="dropdown">
                 <Link to="/news/ve-chung-toi">Về Chúng Tôi</Link>
-                
+
               </div>
               <div className="dropdown">
                 <button>NHÃN HIỆU ▾</button>
@@ -71,37 +71,37 @@ export default function Header() {
                 </div>
               </div>
               <div className="dropdown">
-                <Link to="/categogy/vot-cau-long">Vợt Cầu Lông</Link>
+                <Link to="/category/vot-cau-long">Vợt Cầu Lông</Link>
                 <div className="dropdown-menu">
                   <Link to="/brand/vot-yonex">Vợt Yonex</Link>
                   <Link to="/brand/vot-lining">Vợt Lining</Link>
                 </div>
               </div>
               <div className="dropdown">
-                <Link to="/categogy/vot-pickle-ball">Vợt PickleBall</Link>
+                <Link to="/category/vot-pickle-ball">Vợt PickleBall</Link>
                 <div className="dropdown-menu">
                   <Link to="/VotHead">Vợt Head</Link>
                   <Link to="/VotJoola">Vợt Joola</Link>
                 </div>
               </div>
-              
-               <div className="dropdown">
-                <Link to="/categogy/vot-tennis">Vợt Tennis</Link>
-                <div className="dropdown-menu">
-                  <Link to="/VotHead">Vợt Head</Link>
-                  <Link to="/VotJoola">Vợt Joola</Link>
-                </div>
-              </div>
-               <div className="dropdown">
-                <Link to="/categogy/giay-the-thao">Giày</Link>
-                <div className="dropdown-menu">
-                  <Link to="/VotHead">Vợt Head</Link>
-                  <Link to="/VotJoola">Vợt Joola</Link>
-                </div>
-              </div>
-              
+
               <div className="dropdown">
-                <Link to="/news/categogy/tin-tuc">Tin Tức</Link>
+                <Link to="/category/vot-tennis">Vợt Tennis</Link>
+                <div className="dropdown-menu">
+                  <Link to="/VotHead">Vợt Head</Link>
+                  <Link to="/VotJoola">Vợt Joola</Link>
+                </div>
+              </div>
+              <div className="dropdown">
+                <Link to="/category/giay-the-thao">Giày</Link>
+                <div className="dropdown-menu">
+                  <Link to="/VotHead">Vợt Head</Link>
+                  <Link to="/VotJoola">Vợt Joola</Link>
+                </div>
+              </div>
+
+              <div className="dropdown">
+                <Link to="/news/category/tin-tuc">Tin Tức</Link>
                 {/* <div className="dropdown-menu">
                   <Link to="/VotHead">Vợt Head</Link>
                   <Link to="/VotJoola">Vợt Joola</Link>
@@ -117,7 +117,7 @@ export default function Header() {
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
-              
+
               <div className="icons">
                 {/* Dropdown User */}
                 <div className="account-dropdown">
@@ -156,7 +156,7 @@ export default function Header() {
                 </div>
 
                 {/* Icon Yêu thích */}
-              
+
 
 
                 {/* Icon Giỏ hàng */}

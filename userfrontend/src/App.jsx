@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './component/Webpage/Header';
-import CategoryPage from './component/Webpage/CategogyPage';
+import CategoryPage from './component/Webpage/CategoryPage';
 import Footer from './component/Webpage/Footer';
 import TrangChu from './component/Webpage/TrangChu';
 import Register from './component/Webpage/Register';
@@ -23,20 +23,20 @@ function App() {
             <Routes>
                 <Route path="/" element={<TrangChu />} />
                 {/* Danh sách sản phẩm */}
-            
+
                 {/* Trang chi tiết sản phẩm theo slug */}
                 <Route path="/product/:slug" element={<ProductDetail />} />
-                <Route path="/categogy/:slug" element={<CategoryPage />} />
+                <Route path="/category/:slug" element={<CategoryPage />} />
                 <Route path="/brand/:slug" element={<BrandPage />} />
-                <Route path="/Login" element={<Login/>} />
-                <Route path="/Register" element={<Register/>} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Register" element={<Register />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/profile/update" element={<ProfileUpdate />} />
                 <Route path="/profile/change-password" element={<ProfileChangePass />} />
                 <Route path="/giohang" element={<GioHang />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="news/categogy/:slug" element={<News />} />
-              {/* Chi tiết từng bài viết dựa trên slug */}
+                <Route path="news/category/:slug" element={<News />} />
+                {/* Chi tiết từng bài viết dựa trên slug */}
                 <Route path="news/:slug" element={<NewsDetail />} />
                 <Route path="/news/:slug" element={<AboutUs />} />
                 <Route path="/order-success/:id" element={<OrderSuccess />} />

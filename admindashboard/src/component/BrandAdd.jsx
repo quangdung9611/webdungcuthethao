@@ -27,11 +27,11 @@ function BrandAdd() {
 
     try {
       await axios.post("http://localhost:5000/api/brand", formData);
-    //   alert("Thêm thương hiệu thành công!");
+      //   alert("Thêm thương hiệu thành công!");
       navigate("/brand");
     } catch (err) {
       console.error("Lỗi khi thêm thương hiệu:", err);
-    //   alert("Thêm thương hiệu thất bại!");
+      //   alert("Thêm thương hiệu thất bại!");
     }
   };
 

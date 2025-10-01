@@ -39,9 +39,8 @@ const Dashboard = () => {
           <div className="info-item">
             <span className="label">🔑 Vai trò:</span>
             <span
-              className={`role-badge ${
-                admin.role === "admin" ? "admin-role" : "user-role"
-              }`}
+              className={`role-badge ${admin.role === "admin" ? "admin-role" : "user-role"
+                }`}
             >
               {admin.role === "admin" ? "Quản trị viên" : "Người dùng"}
             </span>

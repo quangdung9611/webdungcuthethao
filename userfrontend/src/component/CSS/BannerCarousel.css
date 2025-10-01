@@ -1,0 +1,29 @@
+.banner-slide {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.carousel-wrapper {
+    margin-bottom: 60px;
+    /* Bọc carousel lại và tách content ở dưới không cho bị chạm tới các thành phần của carousel */
+}

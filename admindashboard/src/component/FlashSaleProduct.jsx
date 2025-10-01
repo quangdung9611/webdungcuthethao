@@ -9,7 +9,7 @@ function FlashSaleProduct() {
   const fetchFlashProducts = async () => {
     try {
       const res = await api.get("/flash-sale-products");
-      
+
       setFlashProducts(res.data);
     } catch (err) {
       console.error("Lỗi khi tải flash sale products:", err.response?.data || err.message);

@@ -11,9 +11,9 @@ import ProductUpdate from "./component/ProductUpdate";
 import ProductMaterials from "./component/ProductMaterial";
 import ProductMaterialAdd from "./component/ProductMaterialAdd";
 import AdminLogin from "./component/AdminLogin";
-import Categogy from "./component/Categogy";
-import CategogyAdd from "./component/CategogyAdd";
-import CategogyUpdate from "./component/CategogyUpdate";
+import Category from "./component/Category";
+import CategoryAdd from "./component/CategoryAdd";
+import CategoryUpdate from "./component/CategoryUpdate";
 import Voucher from "./component/VoucherAdmin";
 import Order from "./component/Order";
 import FlashSales from "./component/FlashSale";
@@ -25,9 +25,9 @@ import FlashSaleProductUpdate from "./component/FlashSaleProductUpdate";
 import NewsAdmin from "./component/NewsAdmin";
 import NewsAdminAdd from "./component/NewsAdminAdd";
 import NewsAdminUpdate from "./component/NewsAdminUpdate";
-import NewsCategogyAdmin from "./component/NewsCategogyAdmin";
-import NewsCategoryAdminAdd from "./component/NewCategogyAdminAdd";
-import NewsCategoryAdminUpdate from "./component/NewCategogyAdminUpdate";
+import NewscategoryAdmin from "./component/NewsCategoryAdmin";
+import NewsCategoryAdminAdd from "./component/NewCategoryAdminAdd";
+import NewsCategoryAdminUpdate from "./component/NewCategoryAdminUpdate";
 import Brand from "./component/Brand";
 import BrandAdd from "./component/BrandAdd";
 import BrandUpdate from "./component/BrandUpdate";
@@ -63,8 +63,8 @@ function Layout() {
             <Route path="/product" element={<Product />} />
             <Route path="/product/add" element={<ProductAdd />} />
             <Route path="/product/update/:id" element={<ProductUpdate />} />
-            
-             {/* ProductMaterial */}
+
+            {/* ProductMaterial */}
             <Route path="/product-material" element={<ProductMaterials />} />
             <Route path="/product-material/add" element={<ProductMaterialAdd />} />
             {/* <Route path="/product/update/:id" element={<ProductUpdate />} /> */}
@@ -72,33 +72,33 @@ function Layout() {
             <Route path="/brand" element={<Brand />} />
             <Route path="/brand/add" element={<BrandAdd />} />
             <Route path="/brand/update/:id" element={<BrandUpdate />} />
-              {/* Categogy*/}
-            <Route path="/categogy" element={<Categogy />} />
-            <Route path="/categogy/add" element={<CategogyAdd />} />
-            <Route path="/categogy/update/:id" element={<CategogyUpdate />} />
+            {/* category*/}
+            <Route path="/category" element={<category />} />
+            <Route path="/category/add" element={<categoryAdd />} />
+            <Route path="/category/update/:id" element={<categoryUpdate />} />
 
             {/* voucher*/}
             <Route path="/voucher" element={<Voucher />} />
-             <Route path="/order" element={<Order />} />
-            {/* <Route path="/categogy/add" element={<CategogyAdd />} />
-            <Route path="/categogy/update/:id" element={<CategogyUpdate />} /> */}
+            <Route path="/order" element={<Order />} />
+            {/* <Route path="/category/add" element={<categoryAdd />} />
+            <Route path="/category/update/:id" element={<categoryUpdate />} /> */}
             {/* flashSale*/}
             <Route path="/flash-sale" element={<FlashSales />} />
             <Route path="/flash-sale/add" element={<FlashSaleAdd />} />
             <Route path="/flash-sale/update/:id" element={<FlashSaleUpdate />} />
-              {/* flashSale*/}
-            <Route path="/flash-sale-products" element={<FlashSaleProduct/>} />
+            {/* flashSale*/}
+            <Route path="/flash-sale-products" element={<FlashSaleProduct />} />
             <Route path="/flash-sale-products/add" element={<FlashSaleProductAdd />} />
             <Route path="/flash-sale-products/update/:id" element={<FlashSaleProductUpdate />} />
             {/* News */}
-            <Route path="/news" element={<NewsAdmin/>} />
-            <Route path="/news/add" element={<NewsAdminAdd/>} />
-            <Route path="/news/update/:id" element={<NewsAdminUpdate/>} />
+            <Route path="/news" element={<NewsAdmin />} />
+            <Route path="/news/add" element={<NewsAdminAdd />} />
+            <Route path="/news/update/:id" element={<NewsAdminUpdate />} />
 
-             {/* NewsCategogy */}
-            <Route path="/news-categogy" element={<NewsCategogyAdmin/>} />
-            <Route path="/news-categogy/add" element={<NewsCategoryAdminAdd />} />
-            <Route path="/news-categogy/update/:id" element={<NewsCategoryAdminUpdate />} />
+            {/* Newscategory */}
+            <Route path="/news-category" element={<NewscategoryAdmin />} />
+            <Route path="/news-category/add" element={<NewsCategoryAdminAdd />} />
+            <Route path="/news-category/update/:id" element={<NewsCategoryAdminUpdate />} />
           </Routes>
         </div>
       </div>

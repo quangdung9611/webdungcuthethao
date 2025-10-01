@@ -31,8 +31,8 @@ const Header = () => {
         <li>
           {admin ? (
             <>
-            <span className="welcome-text">Xin chào, {admin.username} 👋</span>
-            <button className="logout-btn" onClick={handleLogout}>Đăng Xuất</button>
+              <span className="welcome-text">Xin chào, {admin.username} 👋</span>
+              <button className="logout-btn" onClick={handleLogout}>Đăng Xuất</button>
 
             </>
           ) : (

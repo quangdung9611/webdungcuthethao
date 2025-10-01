@@ -66,15 +66,15 @@ function FlashSaleProductAdd() {
         {/* Chọn Flash Sale */}
         <label>Chọn Flash Sale:</label>
         <select
-            name="flash_sale_id"
-            value={form.flash_sale_id}
-            onChange={e => setForm({ ...form, flash_sale_id: e.target.value })}
-            >
-            {flashSales.map(fs => (
-                <option key={fs.flash_sale_id} value={fs.flash_sale_id}>
-                {fs.name} ({fs.status})
-                </option>
-            ))}
+          name="flash_sale_id"
+          value={form.flash_sale_id}
+          onChange={e => setForm({ ...form, flash_sale_id: e.target.value })}
+        >
+          {flashSales.map(fs => (
+            <option key={fs.flash_sale_id} value={fs.flash_sale_id}>
+              {fs.name} ({fs.status})
+            </option>
+          ))}
         </select>
 
         {/* Chọn Product */}

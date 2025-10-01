@@ -26,7 +26,7 @@ function Product() {
 
   // ==== Lấy danh sách loại sản phẩm ====
   const fetchCategories = () => {
-    fetch("http://localhost:5000/api/categogy")
+    fetch("http://localhost:5000/api/category")
       .then((res) => res.json())
       .then((data) => setCategories(data))
       .catch((err) => console.error("Lỗi khi lấy loại sản phẩm:", err));

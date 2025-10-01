@@ -34,7 +34,7 @@ const Brand = () => {
         })
         .catch(err => {
           console.error("Lỗi khi xóa:", err);
-        //   alert("Lỗi kết nối máy chủ.");
+          //   alert("Lỗi kết nối máy chủ.");
         });
     }
   };
@@ -65,7 +65,7 @@ const Brand = () => {
                 <td>{brand.brand_id}</td>
                 <td>{brand.name}</td>
                 <td>{brand.slug}</td>
-               
+
                 <td>
                   <button
                     className="edit-btn"

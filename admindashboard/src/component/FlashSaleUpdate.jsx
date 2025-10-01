@@ -27,8 +27,8 @@ export default function FlashSaleUpdate() {
         setDescription(data.description || "");
         setDiscountType(data.discount_type || "percent");
         setDiscountValue(data.discount_value || "");
-        setStartAt(data.start_at ? data.start_at.slice(0,16) : "");
-        setEndAt(data.end_at ? data.end_at.slice(0,16) : "");
+        setStartAt(data.start_at ? data.start_at.slice(0, 16) : "");
+        setEndAt(data.end_at ? data.end_at.slice(0, 16) : "");
         setStatus(data.status || "scheduled");
       })
       .catch(err => {

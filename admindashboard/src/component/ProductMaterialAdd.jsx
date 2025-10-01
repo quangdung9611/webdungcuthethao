@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const variantSuggestions = {
-  "ao-thun": { sizes: ["S","M","L","XL","XXL"], colors: ["Đen","Trắng","Đỏ","Xanh"] },
-  "giay-the-thao": { sizes: ["38","39","40","41","42","43","44"], colors: ["Đen","Trắng","Xám"] },
-  "vot-cau-long": { sizes: ["3U","4U"], colors: [] },
+  "ao-thun": { sizes: ["S", "M", "L", "XL", "XXL"], colors: ["Đen", "Trắng", "Đỏ", "Xanh"] },
+  "giay-the-thao": { sizes: ["38", "39", "40", "41", "42", "43", "44"], colors: ["Đen", "Trắng", "Xám"] },
+  "vot-cau-long": { sizes: ["3U", "4U"], colors: [] },
 };
 
 function ProductMaterialAdd() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
 
@@ -29,7 +29,7 @@ function ProductMaterialAdd() {
       .then(res => setProducts(res.data))
       .catch(err => console.error(err));
 
-    axios.get("http://localhost:5000/api/categogy")
+    axios.get("http://localhost:5000/api/category")
       .then(res => setCategories(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -92,7 +92,7 @@ function ProductMaterialAdd() {
       await axios.post("http://localhost:5000/api/product-materials", data, {
         headers: { "Content-Type": "multipart/form-data" }
       });
-    //   alert("Thêm biến thể thành công!");
+      //   alert("Thêm biến thể thành công!");
       navigate("/product-material");
     } catch (err) {
       console.error(err);

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import '../CSS/trangchu.css';
+import BannerCarousel from "./BannerCarousel";
+import NewestCategorySlider from "./NewestCategorySlider";
 
 const TrangChu = () => {
   const [products, setProducts] = useState([]);
@@ -23,6 +25,8 @@ const TrangChu = () => {
       .catch(err => console.error("Error fetching flash sales:", err));
   }, []);
 
+  //
+
   // Countdown timer cho flash sale
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -40,7 +44,7 @@ const TrangChu = () => {
   // }, [flashSales]);
 
   // Tính giá sale nếu sản phẩm có flash sale
-    const getSalePrice = (productId, originalPrice) => {
+  const getSalePrice = (productId, originalPrice) => {
     // Lọc tất cả flash sale active áp dụng cho sản phẩm này
     const applicableSales = flashSales.filter(flash =>
       flash.products.some(p => p.product_id === productId)
@@ -61,7 +65,7 @@ const TrangChu = () => {
     } else {
       salePrice = originalPrice;
     }
-  return { price: salePrice, isFlash: true, end_at: bestSale.end_at };
+    return { price: salePrice, isFlash: true, end_at: bestSale.end_at };
   };
   const formatTime = (ms) => {
     const totalSeconds = Math.floor(ms / 1000);
@@ -72,9 +76,12 @@ const TrangChu = () => {
   };
   return (
     <div className="content">
-      <div className="poster">
-        <img src="http://localhost:5000/images/banner.jpg" alt="Poster" />
-      </div>
+      {/* <div className="poster">
+        <img src="http://localhost:5000/images/Homepage_Carousel_1.jpg" alt="Poster" />
+      </div> */}
+      {/* Old banner above */}
+
+      <BannerCarousel />
 
       <div className="title-head">SẢN PHẨM NỔI BẬT</div>
 
@@ -114,6 +121,7 @@ const TrangChu = () => {
           })}
         </div>
       </div>
+      <NewestCategorySlider slug="vot-cau-long" />
     </div>
   );
 };

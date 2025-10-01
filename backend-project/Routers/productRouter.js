@@ -9,24 +9,30 @@ const productController = require("../Controllers/ProductControllers");
 // 1. Lấy tất cả sản phẩm
 router.get("/", productController.getAllProduct);
 
-// 3. Lấy sản phẩm theo slug
+// 2. Lấy sản phẩm theo slug
 router.get("/slug/:slug", productController.getProductBySlug);
 
-// 4. Lấy sản phẩm theo category slug
-router.get("/categogy/:slug", productController.getProductsByCategorySlug);
-// Lấy sản phẩm theo Brand Slug 
+// 3. Lấy sản phẩm theo category slug
+router.get("/category/:slug", productController.getProductsByCategorySlug);
+
+// 4. Lấy sản phẩm theo Brand Slug 
 router.get("/brand/:slug", productController.getProductsByBrands)
 
-// 2. Lấy sản phẩm theo ID (ĐỂ CUỐI CÙNG)
+// 5. Lấy sản phẩm theo ID (ĐỂ CUỐI CÙNG)
 router.get("/:id", productController.getProductById);
 
-// 5. Tạo sản phẩm mới
-router.post("/", productController.uploadSingleImage, productController.createProduct);
+// 6. Lấy 5 sản phẩm mới nhất theo category
+router.get('/category/:slug/newest', productController.getNewestProductsByCategorySlug);
 
-// 6. Cập nhật sản phẩm
-router.put("/:id", productController.uploadSingleImage, productController.updateProduct);
+// 7. Tạo sản phẩm mới
+router.post("/create", productController.uploadSingleImage, productController.createProduct);
 
-// 7. Xóa sản phẩm
-router.delete("/:id", productController.deleteProduct);
+// 8. Cập nhật sản phẩm
+router.put("/update/:id", productController.uploadSingleImage, productController.updateProduct);
+
+// 9. Xóa sản phẩm
+router.delete("/delete/:id", productController.deleteProduct);
+
+
 
 module.exports = router;

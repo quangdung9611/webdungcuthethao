@@ -60,18 +60,35 @@ exports.getProductsByCategorySlug = (req, res) => {
   });
 };
 // Lấy sản phẩm theo Brands 
-exports.getProductsByBrands = (req,res)=>{
-    const {slug} = req.params;
-    const sql = `
+exports.getProductsByBrands = (req, res) => {
+  const { slug } = req.params;
+  const sql = `
     SELECT p.* FROM products p
     JOIN brands br ON p.brand_id = br.brand_id
     WHERE br.slug = ?
     `
-    db.query(sql, [slug], (err, results) => {
+  db.query(sql, [slug], (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(results);
   });
 }
+
+// Lấy 5 sản phẩm mới nhất theo category slug (M)
+exports.getNewestProductsByCategorySlug = (req, res) => {
+  const { slug } = req.params;
+  const sql = `
+    SELECT p.* FROM products p
+    JOIN categories c ON p.category_id = c.category_id
+    WHERE c.slug = ?
+    ORDER BY p.created_at DESC
+    LIMIT 6
+  `.replace(/\s+/g, ' ').trim();
+
+  db.query(sql, [slug], (err, results) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(results);
+  });
+};
 // ==================== CREATE / UPDATE PRODUCT ====================
 
 // Tạo sản phẩm mới (chỉ thông tin cơ bản + ảnh chính)
