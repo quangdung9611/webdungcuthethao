@@ -70,7 +70,9 @@ button {
   margin: 0 5px;
   transition: all 0.3s ease;
 }
-
+.button-group{
+  display: flex;
+}
 .add-btn {
   background-color: #2ecc71;
   color: #fff;

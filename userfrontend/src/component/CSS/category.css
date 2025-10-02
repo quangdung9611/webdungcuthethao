@@ -1,0 +1,163 @@
+/* ===== Container tổng ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Font tổng thể */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fdfdfd;
+  color: #222;
+}
+
+.product-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ===== Grid layout ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ===== Card ===== */
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  border-color: #ccc;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* ===== Ảnh sản phẩm ===== */
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  /* Ảnh vuông, không méo */
+  object-fit: contain;
+  /* Giữ nguyên tỷ lệ, không bị cắt */
+  background: #f8f8f8;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== Badge "Mới" ===== */
+.product-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #28a745;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ===== Icon trái tim ===== */
+.product-card .wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #666;
+  background: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.product-card .wishlist-icon:hover {
+  color: #e63946;
+}
+
+/* ===== Nội dung sản phẩm ===== */
+.product-info {
+  padding: 12px;
+  text-align: left;
+}
+
+.product-info .sizes,
+.product-info .colors {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.product-info h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 6px;
+
+  /* Giới hạn 2 dòng */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Giá và số lượng đã bán */
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.product-bottom .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.product-bottom .sold {
+  font-size: 13px;
+  color: #d9534f;
+  font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}

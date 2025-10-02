@@ -1,0 +1,141 @@
+/* ======= Layout chính ======= */
+.form-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+}
+
+/* ======= Label & Input ======= */
+.form-container label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+}
+
+.form-container select,
+.form-container input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-container select:focus,
+.form-container input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+/* ======= Nhóm nút chọn ======= */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 10px;
+}
+
+.button-group button {
+  width: 70px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #0b0a0a;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* .button-group button:hover {
+  background: #eaeaea;
+} */
+
+.button-group button.active {
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ======= Upload Section ======= */
+.upload-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.upload-section label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+}
+
+.upload-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.upload-item:last-child {
+  border-bottom: none;
+}
+
+.upload-item span {
+  min-width: 140px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+.upload-item input[type="file"] {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ======= Submit ======= */
+.form-container button[type="submit"] {
+  margin-top: 22px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #28a745;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: block;
+  width: 100%;
+}
+
+.form-container button[type="submit"]:hover {
+  background: #218838;
+}

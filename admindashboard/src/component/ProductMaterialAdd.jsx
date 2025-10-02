@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import "../CSS/material_add.css"
 const variantSuggestions = {
   "ao-thun": { sizes: ["S", "M", "L", "XL", "XXL"], colors: ["Đen", "Trắng", "Đỏ", "Xanh"] },
   "giay-the-thao": { sizes: ["38", "39", "40", "41", "42", "43", "44"], colors: ["Đen", "Trắng", "Xám"] },
@@ -133,18 +133,40 @@ function ProductMaterialAdd() {
         )}
 
         {colors.length > 0 && (
-          <div>
-            <label>Màu sắc:</label>
-            <div className="button-group">
-              {colors.map(color => (
-                <div key={color}>
-                  <button type="button" className={selectedColors.includes(color) ? "active" : ""} onClick={() => toggleSelection("selectedColors", color)}>{color}</button>
-                  {selectedColors.includes(color) && <input type="file" onChange={e => handleColorFileChange(e, color)} />}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+  <div>
+    <label>Màu sắc:</label>
+    <div className="button-group">
+      {colors.map(color => (
+        <button
+          type="button"
+          key={color}
+          className={selectedColors.includes(color) ? "active" : ""}
+          onClick={() => toggleSelection("selectedColors", color)}
+        >
+          {color}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
+{/* Upload ảnh sau khi chọn size + màu */}
+{selectedSizes.length > 0 && selectedColors.length > 0 && (
+  <div className="upload-section">
+    <label>Ảnh cho từng biến thể:</label>
+    {selectedSizes.map(size =>
+      selectedColors.map(color => (
+        <div key={`${size}-${color}`} className="upload-item">
+          <span>{`${size} - ${color}`}:</span>
+          <input
+            type="file"
+            onChange={e => handleColorFileChange(e, `${size}-${color}`)}
+          />
+        </div>
+      ))
+    )}
+  </div>
+)}
 
         <label>Số lượng tồn kho</label>
         <input type="number" value={stock} onChange={e => setStock(parseInt(e.target.value) || 0)} required />
