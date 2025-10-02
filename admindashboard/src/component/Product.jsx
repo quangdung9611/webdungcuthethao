@@ -110,7 +110,7 @@ function Product() {
       <div className="header-actions">
         <button
           className="edit-btn"
-          onClick={() => (window.location.href = `/product/add`)}
+          onClick={() => (window.location.href = `/products/add`)}
         >
           Thêm
         </button>
@@ -177,7 +177,7 @@ function Product() {
                   <button
                     className="edit-btn"
                     onClick={() =>
-                      (window.location.href = `/product/update/${product.product_id}`)
+                      (window.location.href = `/products/update/${product.product_id}`)
                     }
                   >
                     Sửa

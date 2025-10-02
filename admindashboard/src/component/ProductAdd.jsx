@@ -50,11 +50,11 @@ function ProductAdd() {
     data.append("image", file);
 
     try {
-      await axios.post("http://localhost:5000/api/products", data, {
+      await axios.post("http://localhost:5000/api/products/create", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Thêm sản phẩm thành công!");
-      navigate("/product");
+      navigate("/products");
     } catch (err) {
       console.error(err);
       alert("Lỗi server khi tạo sản phẩm");

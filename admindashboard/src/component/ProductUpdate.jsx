@@ -11,7 +11,7 @@ export default function ProductUpdate() {
     image: "", // Tên file hiện tại
   });
   const [file, setFile] = useState(null); // File mới được chọn
- 
+
   // Lấy dữ liệu sản phẩm ban đầu
   useEffect(() => {
     const fetchProduct = async () => {
@@ -51,11 +51,11 @@ export default function ProductUpdate() {
     }
     // Sử dụng `axios.put` để gửi yêu cầu
     try {
-      await axios.put(`http://localhost:5000/api/products/${id}`,data, {
-       
+      await axios.put(`http://localhost:5000/api/products/update/${id}`, data, {
+
       });
       // alert("Cập nhật thành công");
-      navigate("/product");
+      navigate("/products");
     } catch (err) {
       console.error("Lỗi khi cập nhật:", err);
       // alert("Cập nhật thất bại");
@@ -63,32 +63,32 @@ export default function ProductUpdate() {
   };
 
   return (
-   <div className="update-form-container">
-  <h2>Cập nhật Sản Phẩm</h2>
-  <div>
-    <label>Tên:</label>
-    <input type="text" name="name" value={formData.name} onChange={handleChange} />
-  </div>
-  <div>
-    <label>Giá:</label>
-    <input type="number" name="price" value={formData.price} onChange={handleChange} />
-  </div>
-  <div>
-    <label>Hình:</label>
-    <input type="file" onChange={handleFileChange} />
-  </div>
+    <div className="update-form-container">
+      <h2>Cập nhật Sản Phẩm</h2>
+      <div>
+        <label>Tên:</label>
+        <input type="text" name="name" value={formData.name} onChange={handleChange} />
+      </div>
+      <div>
+        <label>Giá:</label>
+        <input type="number" name="price" value={formData.price} onChange={handleChange} />
+      </div>
+      <div>
+        <label>Hình:</label>
+        <input type="file" onChange={handleFileChange} />
+      </div>
 
-  {formData.image && (
-    <img
-      src={`http://localhost:5000/images/${formData.image}`}
-      alt="Hình sản phẩm hiện tại"
-    />
-  )}
+      {formData.image && (
+        <img
+          src={`http://localhost:5000/images/${formData.image}`}
+          alt="Hình sản phẩm hiện tại"
+        />
+      )}
 
-  <div>
-    <button onClick={handleUpdate}>Lưu</button>
-  </div>
-</div>
+      <div>
+        <button onClick={handleUpdate}>Lưu</button>
+      </div>
+    </div>
 
   );
 }

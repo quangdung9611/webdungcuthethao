@@ -60,9 +60,9 @@ function Layout() {
             <Route path="/users/add" element={<UserAdd />} />
 
             {/* Product */}
-            <Route path="/product" element={<Product />} />
-            <Route path="/product/add" element={<ProductAdd />} />
-            <Route path="/product/update/:id" element={<ProductUpdate />} />
+            <Route path="/products" element={<Product />} />
+            <Route path="/products/create" element={<ProductAdd />} />
+            <Route path="/products/update/:id" element={<ProductUpdate />} />
 
             {/* ProductMaterial */}
             <Route path="/product-material" element={<ProductMaterials />} />
@@ -74,7 +74,7 @@ function Layout() {
             <Route path="/brand/update/:id" element={<BrandUpdate />} />
             {/* category*/}
             <Route path="/category" element={<Category />} />
-            <Route path="/category/add" element={<CategoryAdd />} />
+            <Route path="/category/create" element={<CategoryAdd />} />
             <Route path="/category/update/:id" element={<CategoryUpdate />} />
 
             {/* voucher*/}
