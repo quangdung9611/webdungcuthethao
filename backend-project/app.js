@@ -37,7 +37,7 @@ app.get('/api', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/categories', categoryRoutes);
+app.use('/api/category', categoryRoutes);
 app.use("/api/vouchers", voucherRoutes);
 app.use("/api/checkout", checkoutRoutes);
 // Routes order
@@ -51,7 +51,7 @@ app.use("/api/news", newsRouter);
 //Routes News-Category
 app.use("/api/news-category", newsCategoryRouter);
 //Routes Brands
-app.use("/api/brands", brandRoutes);
+app.use("/api/brand", brandRoutes);
 // Chạy server
 app.listen(5000, () => {
   console.log('Server đang chạy tại http://localhost:5000/api/');

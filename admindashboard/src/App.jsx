@@ -73,9 +73,9 @@ function Layout() {
             <Route path="/brand/add" element={<BrandAdd />} />
             <Route path="/brand/update/:id" element={<BrandUpdate />} />
             {/* category*/}
-            <Route path="/category" element={<category />} />
-            <Route path="/category/add" element={<categoryAdd />} />
-            <Route path="/category/update/:id" element={<categoryUpdate />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/category/add" element={<CategoryAdd />} />
+            <Route path="/category/update/:id" element={<CategoryUpdate />} />
 
             {/* voucher*/}
             <Route path="/voucher" element={<Voucher />} />

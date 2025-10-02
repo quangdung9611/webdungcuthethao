@@ -121,6 +121,7 @@ const TrangChu = () => {
           })}
         </div>
       </div>
+      <div className='title-head'>SẢN PHẨM MỚI</div>
       <NewestCategorySlider slug="vot-cau-long" />
     </div>
   );
