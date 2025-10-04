@@ -8,7 +8,7 @@ const Sidebar = () => {
       <ul className="sidebar-menu">
         <li><Link to="/">🏠 Dashboard</Link></li>
         <li><Link to="/users">👥 Users</Link></li>
-        <li><Link to="/product">📦 Products</Link></li>
+        <li><Link to="/products">📦 Products</Link></li>
         <li><Link to="/product-material">📦 Materials</Link></li>
         <li><Link to="/brand">Brand</Link></li>
         <li><Link to="/category"> Categories</Link></li>

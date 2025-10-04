@@ -80,7 +80,7 @@ function Product() {
   // ==== Xóa sản phẩm ====
   const handleDelete = (id) => {
     if (window.confirm("Bạn có chắc muốn xóa sản phẩm này?")) {
-      fetch(`http://localhost:5000/api/products/${id}`, {
+      fetch(`http://localhost:5000/api/products/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => {
@@ -110,7 +110,7 @@ function Product() {
       <div className="header-actions">
         <button
           className="edit-btn"
-          onClick={() => (window.location.href = `/products/add`)}
+          onClick={() => (window.location.href = `/products/create`)}
         >
           Thêm
         </button>
