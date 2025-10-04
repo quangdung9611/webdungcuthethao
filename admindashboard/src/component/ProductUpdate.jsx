@@ -80,7 +80,7 @@ export default function ProductUpdate() {
         <input type="text" name="name" value={formData.name} onChange={handleChange} />
       </div>
       <div>
-        <label>Giá:</label>
+        <label>Giá: {Number(formData.price).toLocaleString("vi-VN")} (preview)</label>
         <input type="number" name="price" value={formData.price} onChange={handleChange} />
       </div>
       <div>

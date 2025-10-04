@@ -77,27 +77,33 @@ function ProductAdd() {
           {brands.map(b => <option key={b.brand_id} value={b.brand_id}>{b.name}</option>)}
         </select>
 
-        <label>Tên sản phẩm *</label>
+        <label>Tên sản phẩm *:</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange} required />
 
-        <label>Slug sản phẩm *</label>
+        <label>Slug sản phẩm *:</label>
         <input type="text" name="slug" value={formData.slug} onChange={handleChange} required />
 
-        <label>Mô tả</label>
+        <label>Mô tả:</label>
         <input type="text" name="description" value={formData.description} onChange={handleChange} />
 
-        <label>Giá *</label>
+        <label>Giá *: {" "}
+          {formData.price !== "" &&
+            Number(formData.price).toLocaleString("vi-VN", {
+              style: "currency",
+              currency: "VND",
+            })}
+        </label>
         <input type="number" name="price" value={formData.price} onChange={handleChange} required />
 
-        <label>Số lượng tồn *</label>
+        <label>Số lượng tồn *:</label>
         <input type="number" name="stock" value={formData.stock} onChange={handleChange} required />
 
-        <label>Hình ảnh chính *</label>
+        <label>Hình ảnh chính *:</label>
         <input type="file" onChange={handleFileChange} required />
 
         <button type="submit">Thêm sản phẩm</button>
       </form>
-    </div>
+    </div >
   );
 }
 

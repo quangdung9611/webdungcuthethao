@@ -163,7 +163,7 @@ function Product() {
               <tr key={product.product_id}>
                 <td>{product.product_id}</td>
                 <td>{product.name}</td>
-                <td>{product.price.toLocaleString()} đ</td>
+                <td>{Number(product.price).toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</td>
                 {/* <td>{product.category_name}</td>
                 <td>{product.brand_name}</td> Hiển thị tên thương hiệu */}
                 <td>
