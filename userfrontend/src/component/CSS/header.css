@@ -37,9 +37,33 @@ transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
 /* ====== Logo ====== */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 .logo img {
   height: 55px;
+  width: auto;
   object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ====== Menu ====== */

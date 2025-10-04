@@ -52,9 +52,9 @@ export default function Header() {
 
             {/* Logo */}
             <div className="logo">
-              <a href="#">
+              <Link to="/" className="logo-link">
                 <img src="http://localhost:5000/images/logo.jpg" alt="Logo" />
-              </a>
+              </Link>
             </div>
 
             {/* Menu chính */}
