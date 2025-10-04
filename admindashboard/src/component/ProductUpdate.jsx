@@ -9,6 +9,11 @@ export default function ProductUpdate() {
     name: "",
     price: "",
     image: "", // Tên file hiện tại
+    category_id: "",
+    brand_id: "",
+    slug: "",
+    description: "",
+    stock: ""
   });
   const [file, setFile] = useState(null); // File mới được chọn
 
@@ -17,8 +22,8 @@ export default function ProductUpdate() {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(`http://localhost:5000/api/products/${id}`);
-        const { name, price, image } = res.data;
-        setFormData({ name, price, image });
+        const { name, price, image, category_id, brand_id, slug, description, stock } = res.data;
+        setFormData({ name, price, image, category_id, brand_id, slug, description, stock });
       } catch (err) {
         console.error("Lỗi khi lấy dữ liệu:", err);
         alert("Không thể tải dữ liệu sản phẩm.");
@@ -43,6 +48,11 @@ export default function ProductUpdate() {
     const data = new FormData();
     data.append("name", formData.name);
     data.append("price", formData.price);
+    data.append("category_id", formData.category_id);
+    data.append("brand_id", formData.brand_id);
+    data.append("slug", formData.slug);
+    data.append("description", formData.description);
+    data.append("stock", formData.stock);
     // Dù có file mới hay không, vẫn gửi trường image để backend xử lý
     if (file) {
       data.append("image", file); // Gửi file mới
@@ -77,6 +87,11 @@ export default function ProductUpdate() {
         <label>Hình:</label>
         <input type="file" onChange={handleFileChange} />
       </div>
+      <input type="hidden" name="category_id" value={formData.category_id} />
+      <input type="hidden" name="brand_id" value={formData.brand_id} />
+      <input type="hidden" name="slug" value={formData.slug} />
+      <input type="hidden" name="description" value={formData.description} />
+      <input type="hidden" name="stock" value={formData.stock} />
 
       {formData.image && (
         <img
