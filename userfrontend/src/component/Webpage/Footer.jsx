@@ -13,6 +13,24 @@ const Footer = () => {
             <p>VNB Sports là hệ thống cửa hàng cầu lông với hơn 50 chi nhánh trên toàn quốc, cung cấp sỉ và lẻ các mặt hàng dụng cụ cầu lông từ phong trào tới chuyên nghiệp.</p>
             <p><strong>Sứ mệnh:</strong> "VNB cam kết mang đến những sản phẩm, dịch vụ chất lượng tốt nhất phục vụ cho người chơi thể thao để nâng cao sức khỏe của chính mình."</p>
             <p><strong>Tầm nhìn:</strong> "Trở thành nhà phân phối và sản xuất thể thao lớn nhất Việt Nam."</p>
+            
+            <div className="social-links">
+              <h4>Kết nối với chúng tôi</h4>
+              <div className="social-icons">
+                <a href="#" className="social-icon facebook">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" className="social-icon youtube">
+                  <i className="fab fa-youtube"></i>
+                </a>
+                <a href="#" className="social-icon instagram">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#" className="social-icon tiktok">
+                  <i className="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
           </div>
   
           <div className="footer-section">
